@@ -1,0 +1,20 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Set the RewriteBase to /localhost/nucida for local development
+RewriteBase /localhost/nucida/
+
+# Redirect to remove .php extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L,QSA]
+
+# Disable directory browsing
+Options -Indexes
+
+# Deny access to the lib, contents, and logs directories
+RewriteRule ^(lib|contents|logs)/ - [F,L]
+
+ErrorDocument 404 /nucida/error/404.html
+ErrorDocument 500 /nucida/error/500.html
+ErrorDocument 501 /nucida/error/501.html
