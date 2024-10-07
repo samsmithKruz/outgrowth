@@ -152,7 +152,9 @@ em, i {
     color: var(--text-emphasis);
     font-style: italic;
 }
-
+p.truncate{
+    margin: 0;
+}
 .truncate {
     --line: 1;
     display: -moz-box !important;
@@ -350,7 +352,7 @@ img {
     word-spacing: .5rem;
     transition: word-spacing .3s ease;
 }
-#index_hero section .btn:hover span {
+.btn:hover span {
     word-spacing: 1.5rem;
 }
 .btn:hover {
