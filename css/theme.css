@@ -529,3 +529,76 @@ span.dot.end::after {
 span.dot.end::before {
     background-color: var(--primary);
 }
+
+a.logo {
+    display: flex;
+}
+
+a.logo img {
+    width: auto;
+    height: 5rem;
+}
+
+li:has(ul) input {
+    display: none;
+}
+
+li:has(ul) ul {
+    max-height: 0;
+    overflow: hidden;
+    margin-bottom: 0;
+    transition: max-height 0.3s ease, margin-bottom .2s ease;
+}
+
+li:has(ul) :has(:checked) ul {
+    max-height: 500px;
+    margin-bottom: 1rem;
+}
+.blind {
+    background-color: #ffffff11;
+    border: 1px solid #ffffffa8;
+    border-radius: 8px;
+    backdrop-filter: blur(3px);
+}
+section h5 {
+    font-weight: 400;
+    display: flex;
+    gap: .8rem;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+span.dot {
+    display: inline-block;
+    position: relative;
+}
+
+h1 {
+    transition: font-size 2s ease;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+    word-spacing: .3rem;
+}
+
+:is(h1, h2, h3) .red {
+    color: var(--primary);
+    font-weight: 800;
+}
+
+:is(h1, h2, h3) .font2 {
+    font-family: var(--font2);
+    text-transform: lowercase;
+    font-weight: 800;
+}
+
+:is(h1, h2, h3) .bold {
+    font-weight: 700;
+}
+
+:is(h1, h2, h3):has(div) {
+    display: block;
+}
