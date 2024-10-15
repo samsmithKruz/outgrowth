@@ -1,3 +1,76 @@
 @import url('./theme.css');
 @import url('./header.css');
 @import url('./footer.css');
+
+#hero{
+    background: url('../assets/Nucida-Standorte-United-Kingdom-London.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+    padding: 6rem 2rem;
+}
+#hero .content{
+    max-width: 600px;
+    padding: 2rem;
+}
+#hero p::after, #hero p::before{
+    display: none;
+}
+#hero p{
+    font-family: var(--font3);
+}
+#hero p .red{
+    color: var(--primary);
+}
+#map_text{
+    padding: 5rem 1rem;
+}
+#map_text .container{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    gap: 2rem;
+    align-items: center;
+}
+#map_text .container img{
+    width: 100%;
+    height: auto;
+}
+#odo{
+    padding: 8rem 1rem;
+    background-color: var(--secondary-light-2);
+}
+
+@media (max-width:542px) {
+    #features {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+#features>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: .5rem;
+}
+
+#features h5:has(.dot) {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+#features h5:has(.dot)>div {
+    color: var(--primary);
+    /* display: flex; */
+}
+
+#features h5:not(:has(.dot)) {
+    font-weight: 800;
+    font-size: .8rem;
+    font-style: italic;
+    letter-spacing: .24em;
+}
