@@ -51,6 +51,46 @@ You can view the UI pages by clicking the links below (these refer to files in t
 - **Template Loader (`lib/TemplateLoader.php`)**: Handles loading of templates based on language. Loads content from the `contents/` directory depending on the user's selected language.
 
 
+## Sample Usage: TemplateLoader
+
+The `TemplateLoader` class is used to load specific sections of a page dynamically based on the user's selected language. Below is an example demonstrating how to use the `TemplateLoader` in conjunction with the `bootstrap.php` file for autoloading.
+
+### Example:
+
+```php
+<?php 
+// Autoload required classes
+require_once __DIR__ . "/lib/bootstrap.php";
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nucida - Contact</title>
+    <!-- Add your CSS files here -->
+</head>
+<body>
+    <!-- Other sections of your page -->
+
+    <section id="contact-form">
+        <?= TemplateLoader::load('contact-form-section'); ?>
+    </section>
+
+    <!-- Other sections of your page -->
+
+    <!-- Add your JS files here -->
+</body>
+</html>
+```
+
+### Explanation
+
+- **Autoloading**: The `bootstrap.php` file is included to facilitate autoloading of classes, ensuring that all necessary classes are automatically loaded without the need for explicit includes in each file.
+- **Template Loading**: The method `TemplateLoader::load('contact-form-section')` is invoked within the HTML structure. This allows the dynamic inclusion of the contact form section based on the user's selected language, streamlining the process of managing different content types. This design enhances maintainability, as changes to specific sections can be made independently without impacting the entire page layout.
+
+
+
 ## Environment Setup
 
 - **Environment Variables**: Stored in the `.env` file, which contains project-specific configurations such as database credentials, API keys, and other settings.
