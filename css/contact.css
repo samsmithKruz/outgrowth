@@ -41,7 +41,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea{
 #contact-form .boxes{
     display: grid;
     padding-block: 2rem;
-    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
     gap: 2rem;
 }
 #contact-form .boxes input{
@@ -60,10 +60,13 @@ input[type="text"], input[type="email"], input[type="password"], textarea{
 #contact-form .boxes .box span{
     width: 20px;
     height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .5rem;
     content: '';
     border: 1px solid var(--primary);
 }
-#contact-form .boxes .box input:checked + span{
+#contact-form .boxes .box input:checked + label span{
     background-color: var(--primary);
 }
 #contact-form form label:not(.black){
@@ -103,4 +106,69 @@ div.v span{
 }
 textarea{
     resize: none;
+}
+label[for="agree"]{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+label[for="agree"] > span:first-child{
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    line-height: 1;
+    margin: .15rem;
+    content: '';
+    border: 1px solid var(--primary);
+}
+label[for="agree"] .black{
+    color: var(--text-primary);
+}
+.input:has(label[for="agree"]) input{
+    display: none;
+}
+.input:has(label[for="agree"]) input:checked + label > span:first-child{
+    background-color: var(--primary);
+}
+label[for="agree"] div{
+    display: flex;
+    flex-direction: column;
+}
+.input:has(.btn){
+    align-items: flex-end;
+}
+.input:has(.btn) input{
+    display: none;
+}
+.input:has(.btn) label{
+    position: relative;
+    height: 4rem;
+    width: 10rem;
+}
+.input:has(.btn) label > *{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+.input:has(.btn) label .hover{
+    background-color: #ffe8e8;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.input:has(.btn) label:hover .hover{
+    opacity: 1;
+}
+.input:has(.btn) label .hover span{
+    color: var(--text-primary);
 }
