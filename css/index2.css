@@ -2,7 +2,7 @@
 @import url('./header.css');
 @import url('./footer.css');
 
-#hero{
+#hero {
     background: url('../assets/Nucida-Standorte-United-Kingdom-London.jpg');
     background-size: cover;
     background-position: center;
@@ -10,33 +10,41 @@
     min-height: 90vh;
     padding: 6rem 2rem;
 }
-#hero .content{
+
+#hero .content {
     max-width: 600px;
     padding: 2rem;
 }
-#hero p::after, #hero p::before{
+
+#hero p::after, #hero p::before {
     display: none;
 }
-#hero p{
+
+#hero p {
     font-family: var(--font3);
 }
-#hero p .red{
+
+#hero p .red {
     color: var(--primary);
 }
-#map_text{
+
+#map_text {
     padding: 5rem 1rem;
 }
-#map_text .container{
+
+#map_text .container {
     display: grid;
     grid-template-columns: 1fr 6fr;
     gap: 2rem;
     align-items: center;
 }
-#map_text .container img{
+
+#map_text .container img {
     width: 100%;
     height: auto;
 }
-#odo{
+
+#odo {
     padding: 8rem 1rem;
     background-color: var(--secondary-light-2);
 }
@@ -74,3 +82,105 @@
     font-style: italic;
     letter-spacing: .24em;
 }
+
+#britain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('../assets/britain_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    margin-block: 2rem;
+    padding: 6rem 2rem;
+}
+
+#britain img {
+    width: 5rem;
+    height: auto;
+}
+
+#quality {
+    padding-block: 5rem;
+}
+
+#quality .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#quality .content a.btn {
+    align-self: flex-end;
+}
+
+#quality .qualities {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    gap: 1.8rem;
+}
+
+#quality .qualities>div {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    align-items: center;
+}
+
+#quality .qualities h3 {
+    font-size: .9rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#quality .qualities .line {
+    width: 100%;
+    height: 2px;
+    background-color: #eee;
+    margin-block: 1rem;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+#quality .qualities .line span {
+    height: 100%;
+    background-color: var(--primary);
+    position: relative;
+    transition: width ease .3s;
+    width: 0;
+}
+#quality .qualities.show .line span {
+    width: var(--line, 10px);
+}
+
+#quality .qualities .line span::after {
+    content: attr(data-line);
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 1.9rem;
+    display: flex;
+    font-size: .8em;
+    color: #fff;
+    position: absolute;
+    bottom: 7px;
+    right: -1.9rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    opacity: 0;
+    transition: opacity 3s ease;
+}
+#quality .qualities.show .line span::after {
+    opacity: 1;
+}
+
+/* 
+#quality .qualities .line span:not(.info){
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+#quality .qualities .line span.info{
+} */
