@@ -383,6 +383,8 @@ img {
 
 
 input[type="text"],
+input[type="datetime"],
+input[type="tel"],
 input[type="email"],
 input[type="password"],
 textarea {

@@ -1,0 +1,106 @@
+@import url('./theme.css');
+@import url('./header.css');
+@import url('./footer.css');
+
+#hero {
+    background: url('../assets/Nucida-Standorte-Thailand-Bangkok.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+    padding: 6rem 2rem;
+}
+#hero .content {
+    max-width: 400px;
+    padding: 2rem;
+}
+#odo {
+    padding: 8rem 1rem;
+}
+#contact-form{
+    background-color: var(--secondary-light-2);
+    padding: 8rem 1rem;
+}
+#contact-form form{
+    background-color: #fff;
+    padding: 4rem;
+    border-bottom: 1rem solid var(--primary);
+}
+input[type="text"], input[type="email"], input[type="password"], textarea{
+    margin-bottom: 0;
+}
+#contact-form .container{
+    max-width: 900px;
+}
+#contact-form form>*{
+    margin-bottom: 1rem;
+}
+#contact-form form h4{
+    margin-top: 1.5rem;
+}
+#contact-form .boxes{
+    display: grid;
+    padding-block: 2rem;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 2rem;
+}
+#contact-form .boxes input{
+    display: none;
+}
+#contact-form .boxes .box{
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+}
+#contact-form .boxes .box > *{
+    cursor: pointer;
+    color: inherit;
+    user-select: none;
+}
+#contact-form .boxes .box span{
+    width: 20px;
+    height: 20px;
+    content: '';
+    border: 1px solid var(--primary);
+}
+#contact-form .boxes .box input:checked + span{
+    background-color: var(--primary);
+}
+#contact-form form label:not(.black){
+    color: var(--primary);
+}
+#contact-form form .input{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+#contact-form form .name{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+#contact-form form .name .input:first-child{
+    max-width: 100px;
+}
+div.v{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+div.v span{
+    color: var(--primary);
+}
+#contact-form form .name .input:last-child{
+    flex: 1 1 auto;
+}
+#contact-form form .input-group{
+    display: flex;
+    gap:1rem;
+    flex-wrap: wrap;
+}
+#contact-form form .input-group > div{
+    flex: 1 1 auto;
+}
+textarea{
+    resize: none;
+}
