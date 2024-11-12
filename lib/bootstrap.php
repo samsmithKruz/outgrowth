@@ -75,3 +75,4 @@ spl_autoload_register(function ($class) {
 // Load the default language or the one set by the user
 require_once __DIR__ . '/Language.php';
 Language::init();
+Offices::init();

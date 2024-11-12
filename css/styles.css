@@ -196,10 +196,14 @@ main section {
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 500px;
+    min-height: 550px;
     cursor: pointer;
 }
-
+@media (max-width:376px) {
+    #management .grid>div{
+        min-height: 700px;
+    }
+}
 #management .grid>div h3 {
     font-weight: 700;
     display: flex;
@@ -234,7 +238,7 @@ main section {
 
 #management .grid>div>div p {
     padding: 2rem;
-    padding-top: 10rem;
+    padding-top: 8rem;
     font-size: 1.1rem;
 }
 
@@ -281,6 +285,7 @@ main section {
 }
 
 #features h5:not(:has(.dot)) {
+    text-transform: uppercase;
     font-weight: 800;
     font-size: .8rem;
     font-style: italic;
@@ -344,6 +349,7 @@ main section {
     font-weight: 700;
     letter-spacing: .14em;
     font-style: italic;
+    text-transform: uppercase;
 }
 
 #partner .grid {
