@@ -4,7 +4,7 @@
   </a>
   <nav>
     <div class="container">
-      <h3 class="head">navigations</h3>
+      <h3 class="head">navigation</h3>
       <div id="navs" class="navs grid">
         <div>
           <h4>SERVICE PORTFOLIO</h4>
