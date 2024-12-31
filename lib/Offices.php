@@ -5,9 +5,11 @@ class Offices
     private static $defaultOffice = 'london'; // Default office location
     private static $officeMap = [
         'london' => 'LN',
+        'bangkok' => 'BK',
+        'frankfurt' => 'FR',
+        'karlsruhe' => 'KS',
         'newyork' => 'NY',
-        'sanfrancisco' => 'SF',
-        // Add more mappings here
+        'washingtondc' => 'WC',
     ];
 
     // Initialize the office setting, similar to Language init

@@ -116,8 +116,11 @@ class TemplateLoader
         // Retrieve the directory code for the current office
         $directoryCode = Offices::getOfficeDirectory();
 
+        // Get the current language
+        $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en';
+
         // Construct the path to the office content
-        $templatePath = __DIR__ . '/../contents/offices/' . $directoryCode . '/' . $template . '.php';
+        $templatePath = __DIR__ . '/../contents/'.$lang.'/offices/' . $directoryCode . '/' . $template . '.php';
 
         if (file_exists($templatePath)) {
             ob_start();

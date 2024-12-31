@@ -1,0 +1,145 @@
+@import url('./theme.css');
+@import url('./header.css');
+@import url('./footer.css');
+
+#hero {
+    background: url('../assets/Nucida-Standorte-United-Kingdom-London.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+    padding: 6rem 2rem;
+}
+
+#hero .content {
+    max-width: 600px;
+    padding: 2rem;
+}
+
+#hero p::after, #hero p::before {
+    display: none;
+}
+
+#hero p {
+    font-family: var(--font3);
+}
+
+#hero p .red {
+    color: var(--primary);
+}
+
+
+#boost .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding-block: 2rem;
+}
+
+#boost .grid ul {
+    line-height: 1.9rem;
+    margin-top: .7rem;
+    list-style-image: url('../assets/list-2.svg');
+}
+
+#partner .grid {
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+}
+
+#partner .grid>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#testimonial {
+    background-color: var(--secondary-light-2);
+}
+
+.owl-dots {
+    display: none;
+}
+
+.owl-carousel {
+    margin-top: 2rem;
+    position: relative;
+}
+
+.owl-carousel .item {
+    max-width: 700px;
+    margin-inline: auto;
+    position: relative;
+    margin-top: 2rem;
+    z-index: 20;
+}
+
+.owl-nav {
+    position: absolute;
+    z-index: -10;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.owl-carousel p {
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-style: italic;
+    color: #000;
+}
+
+.owl-carousel h5 {
+    font-weight: 800;
+    display: flex;
+    gap: .5rem;
+}
+
+.owl-carousel h5 .red {
+    color: var(--primary);
+}
+
+.owl-carousel h5>div:first-child {
+    border-inline: 2px solid var(--primary);
+    padding-inline: .5rem;
+}
+
+#join .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+#join .container a {
+    align-self: center;
+}
+main section {
+    padding-block: 8rem;
+}
+
+.dt-paging nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
+}
+.dt-paging-button{
+    padding: .5em 1em;
+    border-color: #0000000d;
+}
+.dt-layout-cell.dt-layout-start{
+    padding: 1.5em 0 .7em;
+}
+.dt-layout-row:has(.dt-layout-cell .dt-search){
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
